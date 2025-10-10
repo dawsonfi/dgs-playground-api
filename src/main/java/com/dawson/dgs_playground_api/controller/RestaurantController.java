@@ -4,7 +4,6 @@ import com.dawson.dgs_playground_api.model.Restaurant;
 import com.dawson.dgs_playground_api.repository.RestaurantRepository;
 import com.netflix.graphql.dgs.DgsComponent;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

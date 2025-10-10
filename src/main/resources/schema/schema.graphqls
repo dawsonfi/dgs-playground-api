@@ -1,5 +1,5 @@
 type Query {
-    restaurants: [Restaurant]
+    restaurants: [Restaurant!]!
 }
 
 enum RestaurantType {

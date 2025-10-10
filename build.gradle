@@ -39,6 +39,8 @@ dependencies {
     implementation 'org.flywaydb:flyway-database-postgresql:11.11.2'
     implementation 'org.postgresql:postgresql:42.7.3'
     implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

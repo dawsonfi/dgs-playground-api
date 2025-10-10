@@ -1,0 +1,22 @@
+type Query {
+    restaurants: [Restaurant]
+}
+
+enum RestaurantType {
+    ITALIAN
+    FRENCH
+    BRAZILIAN
+    MEXICAN
+    CHINESE
+    FAST_FOOD
+}
+
+type Restaurant {
+    id: Int
+    name: String
+    slug: String
+    description: String
+    type: RestaurantType
+    logoUrl: String
+    coverUrl: String
+}

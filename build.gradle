@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-//    id 'org.flywaydb.flyway' version '11.11.2'
+    id 'org.flywaydb.flyway' version '11.11.2'
 	id 'org.springframework.boot' version '3.5.6'
 	id 'io.spring.dependency-management' version '1.1.7'
 	id 'com.netflix.dgs.codegen' version '7.0.3'
@@ -35,8 +35,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.ai:spring-ai-starter-mcp-server-webmvc'
-//    implementation 'org.flywaydb:flyway-core:11.11.2'
-//    implementation 'org.flywaydb:flyway-database-postgresql:11.11.2'
+    implementation 'org.flywaydb:flyway-core:11.11.2'
+    implementation 'org.flywaydb:flyway-database-postgresql:11.11.2'
     implementation 'org.postgresql:postgresql:42.7.3'
     implementation 'com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter'
 
@@ -62,15 +62,15 @@ generateJava {
 	generateClient = true
 }
 
-//flyway {
-//    url = 'jdbc:postgresql://localhost:5432/net'
-//    user = 'myuser'
-//    password = 'mypassword'
-//    schemas = ['net_schema']
-//    locations = ['classpath:db/migration']
-//    driver = 'org.postgresql.Driver'
-//    baselineOnMigrate = true
-//}
+flyway {
+    url = 'jdbc:postgresql://localhost:5432/restaurant'
+    user = 'root'
+    password = 'password'
+    schemas = ['restaurant_schema']
+    locations = ['classpath:db/migration']
+    driver = 'org.postgresql.Driver'
+    baselineOnMigrate = true
+}
 
 tasks.named('test') {
 	useJUnitPlatform()

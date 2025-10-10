@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class DgsPlaygroundApiApplication {
 
 	public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class DgsPlaygroundApiApplication {
 	}
 
     @Bean
-    public ToolCallbackProvider restaurantTools(RestaurantsMcp restaurantsMcp) {
+    public ToolCallbackProvider restaurantTools(final RestaurantsMcp restaurantsMcp) {
         return MethodToolCallbackProvider.builder().toolObjects(restaurantsMcp).build();
     }
 
